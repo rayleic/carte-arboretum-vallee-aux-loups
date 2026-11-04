@@ -39,6 +39,10 @@ const plantPanel = document.querySelector("#plant-panel");
 const plantDetails = document.querySelector("#plant-details");
 const plantTitle = document.querySelector("#plant-title");
 const plantPanelClose = document.querySelector("#plant-panel-close");
+const aboutOpenButton = document.querySelector("#about-open");
+const aboutOverlay = document.querySelector("#about-overlay");
+const aboutPanel = document.querySelector(".about-panel");
+const aboutCloseButton = document.querySelector("#about-close");
 
 const speciesSearch = document.querySelector("#species-search");
 const speciesList = document.querySelector("#species-list");
@@ -524,6 +528,72 @@ speciesSearch.addEventListener("input", renderSpeciesList);
 mapFilters.addEventListener("click", () => {
   plantPanel.hidden = true;
 });
+// About panel: open and close
+if (aboutOpenButton && aboutOverlay && aboutPanel && aboutCloseButton) {
+
+  function closeAboutPanel() {
+    aboutOverlay.hidden = true;
+    aboutOpenButton.focus();
+  }
+
+  aboutOpenButton.addEventListener("click", () => {
+    // Close any other open panels or filters.
+    plantPanel.hidden = true;
+    filterDropdowns.forEach((dropdown) => {
+      dropdown.open = false;
+    });
+
+    aboutOverlay.hidden = false;
+    aboutPanel.focus();
+  });
+
+  aboutCloseButton.addEventListener("click", closeAboutPanel);
+
+  // Close when clicking outside the content panel.
+  aboutOverlay.addEventListener("click", (event) => {
+    if (event.target === aboutOverlay) {
+      closeAboutPanel();
+    }
+  });
+
+  // Close with Escape and keep keyboard navigation inside the panel.
+  document.addEventListener("keydown", (event) => {
+    if (aboutOverlay.hidden) return;
+
+    if (event.key === "Escape") {
+      closeAboutPanel();
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const focusableElements = [
+      ...aboutPanel.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+    ];
+
+    if (focusableElements.length === 0) {
+      event.preventDefault();
+      aboutPanel.focus();
+      return;
+    }
+
+    const first = focusableElements[0];
+    const last = focusableElements[focusableElements.length - 1];
+
+    if (
+      event.shiftKey &&
+      (document.activeElement === first || document.activeElement === aboutPanel)
+    ) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
 
 speciesClear.addEventListener("click", () => {
   selectedTaxa.clear();

@@ -429,3 +429,154 @@ body {
   margin: 0;
   accent-color: #457b3b;
 }
+
+/* About button */
+.about-open {
+  position: absolute;
+  z-index: 4;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #e0e4dc;
+  border-radius: 9px;
+  background: rgb(255 255 255 / 96%);
+  color: #263326;
+  box-shadow: 0 3px 16px rgb(0 0 0 / 15%);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.about-open:hover {
+  background: #f1f5ee;
+}
+
+.about-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  border: 1.5px solid #457b3b;
+  border-radius: 50%;
+  color: #457b3b;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* About overlay */
+.about-overlay {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgb(23 34 24 / 48%);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.about-overlay[hidden] {
+  display: none;
+}
+
+/* About content panel */
+.about-panel {
+  width: min(760px, 100%);
+  max-height: calc(100vh - 48px);
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  padding: 30px 36px;
+  border-radius: 16px;
+  background: #fcfdf9;
+  color: #202820;
+  box-shadow: 0 8px 40px rgb(0 0 0 / 25%);
+  overscroll-behavior: contain;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5e9e1;
+}
+
+.about-header h1 {
+  margin: 0;
+  color: #263326;
+  font-size: 25px;
+  font-weight: 650;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.about-content > section + section {
+  padding-top: 22px;
+  border-top: 1px solid #e5e9e1;
+}
+
+.about-content h2 {
+  margin: 0 0 12px;
+  color: #457b3b;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.about-content p {
+  margin: 0 0 10px;
+  color: #4e594f;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.about-content a {
+  color: #457b3b;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .about-open {
+    top: 10px;
+    right: 10px;
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+
+  /* Leave room for the About button above the horizontally scrollable filters. */
+  .map-filters {
+    right: 112px;
+  }
+
+  .about-overlay {
+    padding: 10px;
+  }
+
+  .about-panel {
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
+    padding: 23px 20px;
+    border-radius: 13px;
+  }
+
+  .about-header h1 {
+    font-size: 22px;
+  }
+}

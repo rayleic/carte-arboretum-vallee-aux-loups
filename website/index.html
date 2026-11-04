@@ -14,6 +14,16 @@
 <body>
   <main class="map-page">
     <div id="map" aria-label="Carte interactive de l'arboretum"></div>
+    <button
+      id="about-open"
+      class="about-open"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="about-overlay"
+    >
+      <span class="about-icon" aria-hidden="true">i</span>
+      À propos
+    </button>
     <aside id="plant-panel" class="plant-panel" hidden>
   
     <div class="plant-panel-header">
@@ -100,6 +110,72 @@
 </section>
 
     <div id="map-error" class="map-error" role="alert" hidden></div>
+  <div id="about-overlay" class="about-overlay" hidden>
+  <section
+    class="about-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="about-title"
+    tabindex="-1"
+  >
+    <header class="about-header">
+      <h1 id="about-title">À propos</h1>
+
+      <button
+        id="about-close"
+        class="panel-close"
+        type="button"
+        aria-label="Fermer"
+      >
+        ×
+      </button>
+    </header>
+
+    <div class="about-content">
+      <section aria-labelledby="about-project-title">
+        <h2 id="about-project-title">Le projet</h2>
+        <p>
+          Ce site est un projet personnel, suscité par mon intérêt pour la botanique,  
+          et l'envie d'utiliser les outils d'aide à la programmation pour me former.
+          Cette carte interactive permet de localiser les végétaux inventoriés et d'explorer 
+          la collection à l'aide de différents filtres. Que ce soit pour explorer à pied ou 
+          pour étudier la diversité de la collection de l'arboretum, ce site devrait être utile
+          aux amateurs de la nature.
+        </p>
+      </section>
+
+      <section aria-labelledby="about-contact-title">
+        <h2 id="about-contact-title">Me contacter</h2>
+        <p>
+          Vous pouvez me contacter à l'adresse
+        
+        <a href = "mailto:benoit.67@gmx.fr" >
+          benoit.67@gmx.fr </a>
+        </p>
+      </section>
+
+      <section aria-labelledby="about-data-title">
+        <h2 id="about-data-title">Données utilisées</h2>
+        <p>
+          Les données botaniques proviennent de l'inventaire de l'Arboretum,
+          disponible sur la plateforme Open Data de la Région Île-de-France.
+        </p>
+        <p>
+          <a
+            href="https://data.iledefrance.fr/explore/dataset/inventaire-botanique-de-larboretum-du-domaine-departemental-de-la-vallee-aux-lou/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consulter la source des données
+          </a>
+        </p>
+        <p>
+          Le fond de carte est fourni par OpenFreeMap.
+        </p>
+      </section>
+    </div>
+  </section>
+</div>
   </main>
 
   <script type="module" src="./app.js"></script>
