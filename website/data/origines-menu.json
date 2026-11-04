@@ -1,0 +1,30 @@
+[
+  {
+    "continent": "Asie",
+    "effectif": 452
+  },
+  {
+    "continent": "Horticole",
+    "effectif": 362
+  },
+  {
+    "continent": "Europe",
+    "effectif": 292
+  },
+  {
+    "continent": "Amérique du Nord",
+    "effectif": 240
+  },
+  {
+    "continent": "Afrique",
+    "effectif": 144
+  },
+  {
+    "continent": "Amérique du Sud",
+    "effectif": 4
+  },
+  {
+    "continent": "Océanie",
+    "effectif": 3
+  }
+]

@@ -1,0 +1,304 @@
+---
+title: "ArbresVallee"
+output: html_document
+date: "2026-11-02"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#setwd()
+```
+
+
+```{r loading data}
+library(sf)
+
+arboretum <- st_read("inventaire-botanique.geojson")
+```
+
+```{r}
+nrow(arboretum)
+st_geometry_type(arboretum)
+st_crs(arboretum)
+```
+
+```{r}
+#library(dplyr)
+
+# Check missing values in each field
+missing_summary <- arboretum |>
+  st_drop_geometry() |>
+  summarise(
+    across(everything(), ~ sum(is.na(.x) | .x == "")
+    )
+  ) |>
+  tidyr::pivot_longer(
+    everything(),
+    names_to = "field",
+    values_to = "missing"
+  ) |>
+  filter(missing > 0) |>
+  arrange(desc(missing))
+
+missing_summary
+```
+
+```{r création 2ème base de données finale pour le site}
+arboretum_web <- arboretum |>
+  filter(statut == "Existant") |> #Note: Abattus et NA exclus d'office
+  mutate(
+    type = case_when(
+      type == "G" ~ "Liane",
+      type == "P" ~ "Palmier",
+      TRUE ~ type
+    )
+  )
+```
+
+```{r mise en forme données pour champ de recherche Espèce}
+# Create a taxonomic matching key for each plant
+arboretum_web <- arboretum_web |>
+  select(-any_of(c("nom_taxonomique", "libelle_espece", "taxon_key"))) |>
+  mutate(
+    espece = if_else(
+      !is.na(genre) & (is.na(espece) | trimws(espece) == ""),
+      "sp.",
+      as.character(espece)
+    ),
+    taxon_key = paste(
+      coalesce(as.character(genre), ""),
+      coalesce(as.character(espece), ""),
+      coalesce(as.character(sous_espece), "")
+    ),
+    taxon_key = na_if(trimws(gsub("\\s+", " ", taxon_key)), "")
+  )
+
+
+# Count the different common names for each taxon
+noms_communs <- arboretum_web |>
+  st_drop_geometry() |>
+  filter(
+    !is.na(taxon_key),
+    !is.na(nom_vernaculaire),
+    trimws(nom_vernaculaire) != ""
+  ) |>
+  count(taxon_key, nom_vernaculaire, name = "effectif")
+
+
+# Select the most frequent common name for each taxon
+nom_prefere <- noms_communs |>
+  arrange(taxon_key, desc(effectif), nom_vernaculaire) |>
+  group_by(taxon_key) |>
+  slice_head(n = 1) |>
+  ungroup() |>
+  select(taxon_key, nom_vernaculaire)
+
+
+# Count the number of distinct common names per taxon
+stats_noms <- noms_communs |>
+  count(taxon_key, name = "nb_noms_communs")
+
+
+# Create one menu entry for every taxon, even without a common name
+especes_menu <- arboretum_web |>
+  st_drop_geometry() |>
+  distinct(taxon_key) |>
+  filter(!is.na(taxon_key)) |>
+  left_join(stats_noms, by = "taxon_key") |>
+  left_join(nom_prefere, by = "taxon_key") |>
+  mutate(
+  nb_noms_communs = coalesce(nb_noms_communs, 0L),
+
+  libelle_espece = case_when(
+    # Genus-only entries never receive an asterisk
+    grepl(" sp.$", taxon_key) ~ {
+      if_else(
+        nb_noms_communs > 0,
+        paste0(taxon_key, " (", nom_vernaculaire, ")"),
+        taxon_key
+      )
+    },
+
+    # Multiple common names
+    nb_noms_communs > 1 ~
+      paste0(taxon_key, " (", nom_vernaculaire, ") *"),
+
+    # One common name
+    nb_noms_communs == 1 ~
+      paste0(taxon_key, " (", nom_vernaculaire, ")"),
+
+    # No common name
+    TRUE ~ taxon_key
+  )
+)
+```
+
+
+
+```{r exports pour site}
+# Convert list columns into text
+collapse_values <- function(x) {
+  vapply(x, function(value) {
+    value <- as.character(unlist(value, use.names = FALSE))
+    value <- value[!is.na(value)]
+    value <- value[nzchar(trimws(value))]
+
+    if (length(value) == 0) {
+      NA_character_
+    } else {
+      paste(value, collapse = ", ")
+    }
+  }, character(1))
+}
+
+
+# Prepare plant data for the website
+arboretum_export <- arboretum_web |>
+  mutate(
+    plant_id = sprintf("plant-%04d", row_number()),
+    across(c(continent, orig_geo), collapse_values)
+  ) |>
+  select(
+    plant_id,
+    id_arbre,
+    taxon_key,
+    genre,
+    espece,
+    nom_latin,
+    nom_vernaculaire,
+    famille,
+    collection,
+    plantation,
+    continent,
+    orig_geo,
+    type
+  )
+
+sf::st_write(
+  arboretum_export,
+  "website/data/plants.geojson",
+  driver = "GeoJSON",
+  delete_dsn = TRUE,
+  quiet = TRUE
+)
+
+
+# Count the number of individual plants per taxon
+effectifs_especes <- arboretum_web |>
+  st_drop_geometry() |>
+  filter(!is.na(taxon_key)) |>
+  count(taxon_key, name = "effectif")
+
+
+# Prepare the menu data
+especes_menu_export <- especes_menu |>
+  left_join(effectifs_especes, by = "taxon_key") |>
+  select(taxon_key, libelle_espece, effectif) |>
+  arrange(desc(effectif), libelle_espece)
+
+especes_menu_export |>
+  filter(grepl(" sp\\.$", taxon_key)) |>
+  arrange(taxon_key)
+
+# Export
+jsonlite::write_json(
+  especes_menu_export,
+  "website/data/especes-menu.json",
+  dataframe = "rows",
+  auto_unbox = TRUE,
+  na = "null",
+  pretty = TRUE
+)
+
+origines_menu_export <- arboretum_web |>
+  st_drop_geometry() |>
+  mutate(plant_row = row_number()) |>
+  select(plant_row, continent) |>
+  tidyr::unnest_longer(continent) |>
+  mutate(continent = trimws(as.character(continent))) |>
+  filter(!is.na(continent), continent != "") |>
+  distinct(plant_row, continent) |>
+  count(continent, name = "effectif") |>
+  arrange(desc(effectif), continent)
+
+jsonlite::write_json(
+  origines_menu_export,
+  "website/data/origines-menu.json",
+  dataframe = "rows",
+  auto_unbox = TRUE,
+  na = "null",
+  pretty = TRUE
+)
+```
+
+```{r export liste famille taxonomique}
+familles_menu_export <- arboretum_web |>
+  st_drop_geometry() |>
+  filter(!is.na(famille), trimws(famille) != "") |>
+  count(famille, name = "effectif") |>
+  arrange(desc(effectif), famille)
+
+jsonlite::write_json(
+  familles_menu_export,
+  "website/data/familles-menu.json",
+  dataframe = "rows",
+  auto_unbox = TRUE,
+  na = "null",
+  pretty = TRUE
+)
+```
+
+
+
+```{r checks}
+fichiers <- file.path(
+  "website/data",
+  c("plants.geojson", "especes-menu.json")
+)
+
+tibble::tibble(
+  fichier = basename(fichiers),
+  existe = file.exists(fichiers),
+  taille_Ko = round(
+    file.info(fichiers)$size / 1024,
+    1
+  )
+)
+
+# Verify plant fields
+plants_check <- sf::st_read(
+  "website/data/plants.geojson",
+  quiet = TRUE
+)
+
+names(plants_check)
+
+# Verify species counts
+menu_check <- jsonlite::fromJSON(
+  "website/data/especes-menu.json"
+)
+
+menu_check |>
+  filter(grepl("^Tilia cordata$", taxon_key))
+```
+
+```{r}
+# Check genus-only entries
+especes_menu |>
+  filter(grepl(" sp.$", taxon_key)) |>
+  arrange(taxon_key)
+
+
+# Check that no genus-only entry has an asterisk
+especes_menu |>
+  filter(grepl(" sp.$", taxon_key)) |>
+  filter(grepl("\\*", libelle_espece))
+
+
+# Count plants associated with genus-only entries
+arboretum_web |>
+  st_drop_geometry() |>
+  filter(grepl(" sp.$", taxon_key)) |>
+  count(taxon_key, sort = TRUE)
+```
+

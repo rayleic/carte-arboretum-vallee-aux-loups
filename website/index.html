@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carte botanique de l'Arboretum du Domaine départemental de la Vallée-aux-Loups.">
+  <title>Arboretum de la Vallée-aux-Loups</title>
+  <link
+    href="https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css"
+    rel="stylesheet"
+  >
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+  <main class="map-page">
+    <div id="map" aria-label="Carte interactive de l'arboretum"></div>
+    <aside id="plant-panel" class="plant-panel" hidden>
+  
+    <div class="plant-panel-header">
+    <div>
+        <h2 id="plant-title"></h2>
+      </div>
+
+      <button
+        id="plant-panel-close"
+        class="panel-close"
+        type="button"
+        aria-label="Fermer"
+      >
+        ×
+      </button>
+    </div>
+
+  <div id="plant-details" class="plant-details"></div>
+</aside>
+
+<section class="map-filters" aria-label="Filtres de la carte">
+  
+  <label class="filter-toggle">
+    <input id="remarkable-filter" type="checkbox">
+    <span>Remarquable</span>
+  </label>
+
+  <details class="filter-dropdown" id="species-filter">
+    <summary>
+      <span class="filter-name">Espèce</span>
+      <span class="filter-summary" id="species-selection-count">Toutes</span>
+    </summary>
+
+    <div class="filter-dropdown-content">
+      <label class="visually-hidden" for="species-search">
+        Rechercher une espèce
+      </label>
+
+      <input
+        id="species-search"
+        type="search"
+        placeholder="Rechercher une espèce…"
+        autocomplete="off"
+      >
+
+      <button id="species-clear" type="button" disabled>
+        Effacer la sélection
+      </button>
+
+      <div
+        id="species-list"
+        class="species-list"
+        aria-label="Liste des espèces"
+      >
+        <p class="species-placeholder">
+          La liste des espèces sera chargée ici.
+        </p>
+      </div>
+    </div>
+  </details>
+  
+  <details class="filter-dropdown" id="family-filter">
+    <summary>
+      <span class="filter-name">Famille</span>
+      <span class="filter-summary" id="family-selection-count">Toutes</span>
+    </summary>
+
+    <div class="filter-dropdown-content">
+      <div id="family-list" class="species-list"></div>
+    </div>
+  </details>
+
+  <details class="filter-dropdown" id="origin-filter">
+    <summary>
+      <span class="filter-name">Origine</span>
+      <span class="filter-summary" id="origin-selection-count">Toutes</span>
+    </summary>
+
+    <div class="filter-dropdown-content">
+      <div id="origin-list" class="species-list"></div>
+    </div>
+  </details>
+
+</section>
+
+    <div id="map-error" class="map-error" role="alert" hidden></div>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

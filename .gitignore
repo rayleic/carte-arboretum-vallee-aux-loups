@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Original inventory (available from the official data source)
+inventaire-botanique.geojson
+
+# Local development server (not needed for publication)
+website/dev_server.py
+
+# R temporary files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/

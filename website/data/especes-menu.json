@@ -1,0 +1,1677 @@
+[
+  {
+    "taxon_key": "Acer palmatum",
+    "libelle_espece": "Acer palmatum (Erable palmé) *",
+    "effectif": 61
+  },
+  {
+    "taxon_key": "Betula sp.",
+    "libelle_espece": "Betula sp.",
+    "effectif": 53
+  },
+  {
+    "taxon_key": "Taxus baccata",
+    "libelle_espece": "Taxus baccata (If commun) *",
+    "effectif": 51
+  },
+  {
+    "taxon_key": "Buxus sempervirens",
+    "libelle_espece": "Buxus sempervirens (Buis commun) *",
+    "effectif": 45
+  },
+  {
+    "taxon_key": "Quercus palustris",
+    "libelle_espece": "Quercus palustris (Chêne des marais)",
+    "effectif": 36
+  },
+  {
+    "taxon_key": "Castanea sativa",
+    "libelle_espece": "Castanea sativa (Châtaignier cultivé)",
+    "effectif": 32
+  },
+  {
+    "taxon_key": "Quercus ilex",
+    "libelle_espece": "Quercus ilex (Chêne vert)",
+    "effectif": 32
+  },
+  {
+    "taxon_key": "Carpinus betulus",
+    "libelle_espece": "Carpinus betulus (Charme commun) *",
+    "effectif": 27
+  },
+  {
+    "taxon_key": "Rhododendron x",
+    "libelle_espece": "Rhododendron x (Rhododendron cv.)",
+    "effectif": 25
+  },
+  {
+    "taxon_key": "Malus domestica",
+    "libelle_espece": "Malus domestica (Pommier domestique cv.)",
+    "effectif": 22
+  },
+  {
+    "taxon_key": "Nyssa sylvatica",
+    "libelle_espece": "Nyssa sylvatica (Tupélo noir)",
+    "effectif": 22
+  },
+  {
+    "taxon_key": "Liquidambar styraciflua",
+    "libelle_espece": "Liquidambar styraciflua (Copalme d'Amérique)",
+    "effectif": 21
+  },
+  {
+    "taxon_key": "Alnus glutinosa",
+    "libelle_espece": "Alnus glutinosa (Aulne glutineux cv.) *",
+    "effectif": 20
+  },
+  {
+    "taxon_key": "Corylus avellana",
+    "libelle_espece": "Corylus avellana (Noisetier tortueux) *",
+    "effectif": 20
+  },
+  {
+    "taxon_key": "Sequoia sempervirens",
+    "libelle_espece": "Sequoia sempervirens (Séquoia toujours vert)",
+    "effectif": 20
+  },
+  {
+    "taxon_key": "Taxodium distichum",
+    "libelle_espece": "Taxodium distichum (Cyprès chauve) *",
+    "effectif": 17
+  },
+  {
+    "taxon_key": "Fagus sylvatica",
+    "libelle_espece": "Fagus sylvatica (Hêtre pourpre) *",
+    "effectif": 16
+  },
+  {
+    "taxon_key": "Hydrangea macrophylla",
+    "libelle_espece": "Hydrangea macrophylla (Hortensia à grandes feuilles cv.)",
+    "effectif": 16
+  },
+  {
+    "taxon_key": "Liriodendron tulipifera",
+    "libelle_espece": "Liriodendron tulipifera (Tulipier de Virginie)",
+    "effectif": 16
+  },
+  {
+    "taxon_key": "Prunus avium",
+    "libelle_espece": "Prunus avium (Merisier à fleurs doubles)",
+    "effectif": 16
+  },
+  {
+    "taxon_key": "Styrax sp.",
+    "libelle_espece": "Styrax sp.",
+    "effectif": 15
+  },
+  {
+    "taxon_key": "Acer saccharinum",
+    "libelle_espece": "Acer saccharinum (Erable argenté)",
+    "effectif": 13
+  },
+  {
+    "taxon_key": "Ilex aquifolium",
+    "libelle_espece": "Ilex aquifolium (Houx cv.) *",
+    "effectif": 13
+  },
+  {
+    "taxon_key": "Ginkgo biloba",
+    "libelle_espece": "Ginkgo biloba (Arbre aux quarante écus) *",
+    "effectif": 11
+  },
+  {
+    "taxon_key": "Juniperus x pfitzeriana",
+    "libelle_espece": "Juniperus x pfitzeriana (Genévrier de Pfitzer) *",
+    "effectif": 11
+  },
+  {
+    "taxon_key": "Trachycarpus fortunei",
+    "libelle_espece": "Trachycarpus fortunei (Palmier de Chine)",
+    "effectif": 11
+  },
+  {
+    "taxon_key": "Euonymus alatus",
+    "libelle_espece": "Euonymus alatus (Fusain ailé) *",
+    "effectif": 10
+  },
+  {
+    "taxon_key": "Magnolia liliiflora",
+    "libelle_espece": "Magnolia liliiflora (Magnolia à fleurs de Lys)",
+    "effectif": 10
+  },
+  {
+    "taxon_key": "Camellia oleifera",
+    "libelle_espece": "Camellia oleifera (Camélia sasanqua cv.) *",
+    "effectif": 9
+  },
+  {
+    "taxon_key": "Skimmia japonica",
+    "libelle_espece": "Skimmia japonica (Skimmia du Japon) *",
+    "effectif": 9
+  },
+  {
+    "taxon_key": "Amelanchier canadensis",
+    "libelle_espece": "Amelanchier canadensis (Amélanchier du Canada)",
+    "effectif": 8
+  },
+  {
+    "taxon_key": "Aucuba japonica",
+    "libelle_espece": "Aucuba japonica (Aucuba du Japon) *",
+    "effectif": 8
+  },
+  {
+    "taxon_key": "Magnolia grandiflora",
+    "libelle_espece": "Magnolia grandiflora (Magnolia à grandes fleurs) *",
+    "effectif": 8
+  },
+  {
+    "taxon_key": "Prunus lusitanica",
+    "libelle_espece": "Prunus lusitanica (Laurier du Portugal) *",
+    "effectif": 8
+  },
+  {
+    "taxon_key": "Quercus laurifolia",
+    "libelle_espece": "Quercus laurifolia (Chêne à feuilles de laurier)",
+    "effectif": 8
+  },
+  {
+    "taxon_key": "Cedrus atlantica",
+    "libelle_espece": "Cedrus atlantica (Cèdre bleu de l'Atlas) *",
+    "effectif": 7
+  },
+  {
+    "taxon_key": "Hamamelis virginiana",
+    "libelle_espece": "Hamamelis virginiana (Hamamélis de Virginie)",
+    "effectif": 7
+  },
+  {
+    "taxon_key": "Hamamelis x intermedia",
+    "libelle_espece": "Hamamelis x intermedia (Hamamélis hybride cv.)",
+    "effectif": 7
+  },
+  {
+    "taxon_key": "Hydrangea paniculata",
+    "libelle_espece": "Hydrangea paniculata (Hortensia paniculé cv.) *",
+    "effectif": 7
+  },
+  {
+    "taxon_key": "Pinus sylvestris",
+    "libelle_espece": "Pinus sylvestris (Pin sylvestre de Waterer) *",
+    "effectif": 7
+  },
+  {
+    "taxon_key": "Quercus sp.",
+    "libelle_espece": "Quercus sp.",
+    "effectif": 7
+  },
+  {
+    "taxon_key": "Styrax japonicus",
+    "libelle_espece": "Styrax japonicus (Styrax du Japon cv.) *",
+    "effectif": 7
+  },
+  {
+    "taxon_key": "Betula pendula",
+    "libelle_espece": "Betula pendula (Bouleau pleureur de Young) *",
+    "effectif": 6
+  },
+  {
+    "taxon_key": "Chamaecyparis obtusa",
+    "libelle_espece": "Chamaecyparis obtusa (Cyprès du Japon) *",
+    "effectif": 6
+  },
+  {
+    "taxon_key": "Hydrangea anomala ssp. petiolaris",
+    "libelle_espece": "Hydrangea anomala ssp. petiolaris (Hortensia grimpant cv.)",
+    "effectif": 6
+  },
+  {
+    "taxon_key": "Malus trilobata",
+    "libelle_espece": "Malus trilobata (Pommier sauvage du Liban)",
+    "effectif": 6
+  },
+  {
+    "taxon_key": "Osmanthus sp.",
+    "libelle_espece": "Osmanthus sp.",
+    "effectif": 6
+  },
+  {
+    "taxon_key": "Parrotia persica",
+    "libelle_espece": "Parrotia persica (Parrotie de Perse)",
+    "effectif": 6
+  },
+  {
+    "taxon_key": "Pinus nigra ssp. laricio",
+    "libelle_espece": "Pinus nigra ssp. laricio (Pin laricio)",
+    "effectif": 6
+  },
+  {
+    "taxon_key": "Prunus serrulata",
+    "libelle_espece": "Prunus serrulata (Cerisier du Japon cv.) *",
+    "effectif": 6
+  },
+  {
+    "taxon_key": "Acer davidii",
+    "libelle_espece": "Acer davidii (Erable du Père David) *",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Alnus incana",
+    "libelle_espece": "Alnus incana (Aulne blanc) *",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Alnus x spaethii",
+    "libelle_espece": "Alnus x spaethii (Aulne de Spaeth)",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Castanea crenata",
+    "libelle_espece": "Castanea crenata (Châtaignier du Japon)",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Hydrangea quercifolia",
+    "libelle_espece": "Hydrangea quercifolia (Hortensia à feuilles de chêne cv.)",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Lagerstroemia indica",
+    "libelle_espece": "Lagerstroemia indica (Lilas des Indes)",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Pinus mugo",
+    "libelle_espece": "Pinus mugo (Pin des montagnes) *",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Pyrus communis",
+    "libelle_espece": "Pyrus communis (Poirier sauvage) *",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Quercus robur",
+    "libelle_espece": "Quercus robur (Chêne pédonculé) *",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Quercus x turneri",
+    "libelle_espece": "Quercus x turneri (Chêne de Turner)",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Rhododendron sp.",
+    "libelle_espece": "Rhododendron sp.",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Robinia pseudoacacia",
+    "libelle_espece": "Robinia pseudoacacia (Robinier faux-acacia) *",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Rosa x",
+    "libelle_espece": "Rosa x (Rose cv.)",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Styphnolobium japonicum",
+    "libelle_espece": "Styphnolobium japonicum (Sophora du Japon) *",
+    "effectif": 5
+  },
+  {
+    "taxon_key": "Acer buergerianum",
+    "libelle_espece": "Acer buergerianum (Erable trifide)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Acer griseum",
+    "libelle_espece": "Acer griseum (Erable à écorce de papier)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Acer japonicum",
+    "libelle_espece": "Acer japonicum (Erable du Japon cv.)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Araucaria angustifolia",
+    "libelle_espece": "Araucaria angustifolia (Pin du Parana)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Camellia japonica",
+    "libelle_espece": "Camellia japonica (Camélia du Japon cv.)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Cercidiphyllum japonicum",
+    "libelle_espece": "Cercidiphyllum japonicum (Arbre à caramel)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Cornus controversa",
+    "libelle_espece": "Cornus controversa (Cornouiller des Pagodes) *",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Cryptomeria japonica",
+    "libelle_espece": "Cryptomeria japonica (Cryptoméria du Japon) *",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Davidia involucrata",
+    "libelle_espece": "Davidia involucrata (Arbre aux mouchoirs) *",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Halesia tetraptera",
+    "libelle_espece": "Halesia tetraptera (Halésie des montagnes)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Hydrangea aspera",
+    "libelle_espece": "Hydrangea aspera (Hortensia rugueux cv.)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Koelreuteria paniculata",
+    "libelle_espece": "Koelreuteria paniculata (Savonnier)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Pinus bungeana",
+    "libelle_espece": "Pinus bungeana (Pin Napoléon)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Platanus orientalis",
+    "libelle_espece": "Platanus orientalis (Platane d'Orient) *",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Prunus cerasifera",
+    "libelle_espece": "Prunus cerasifera (Prunier myrobolan) *",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Pterocarya fraxinifolia",
+    "libelle_espece": "Pterocarya fraxinifolia (Noyer ailé du Caucase)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Sequoiadendron giganteum",
+    "libelle_espece": "Sequoiadendron giganteum (Séquoia géant)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Syringa sp.",
+    "libelle_espece": "Syringa sp.",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Tilia platyphyllos",
+    "libelle_espece": "Tilia platyphyllos (Tilleul à grandes feuilles)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Wisteria sinensis",
+    "libelle_espece": "Wisteria sinensis (Glycine de Chine)",
+    "effectif": 4
+  },
+  {
+    "taxon_key": "Acer platanoides",
+    "libelle_espece": "Acer platanoides (Erable plane cv.) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Acer rubrum",
+    "libelle_espece": "Acer rubrum (Erable rouge) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Acer tataricum ssp. ginnala",
+    "libelle_espece": "Acer tataricum ssp. ginnala (Erable de l'Amour)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Actinidia arguta",
+    "libelle_espece": "Actinidia arguta (Kiwaï cv.)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Alnus formosana",
+    "libelle_espece": "Alnus formosana (Aulne de Taïwan)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Alnus japonica",
+    "libelle_espece": "Alnus japonica (Aulne du Japon)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Alnus maximowiczii",
+    "libelle_espece": "Alnus maximowiczii",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Amelanchier sp.",
+    "libelle_espece": "Amelanchier sp.",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Arbutus unedo",
+    "libelle_espece": "Arbutus unedo (Arbousier commun)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Betula pendula ssp. mandshurica",
+    "libelle_espece": "Betula pendula ssp. mandshurica (Bouleau blanc du Japon)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Calocedrus decurrens",
+    "libelle_espece": "Calocedrus decurrens (Calocèdre)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Camellia sp.",
+    "libelle_espece": "Camellia sp. (Camélia cv.)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Catalpa bignonioides",
+    "libelle_espece": "Catalpa bignonioides (Catalpa)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Cedrus libani",
+    "libelle_espece": "Cedrus libani (Cèdre du Liban) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Cornus florida",
+    "libelle_espece": "Cornus florida (Cornouiller à fleurs rouges) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Cornus mas",
+    "libelle_espece": "Cornus mas (Cornouiller mâle) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Cotoneaster salicifolius",
+    "libelle_espece": "Cotoneaster salicifolius (Cotonéaster à feuilles de saule) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Euonymus europaeus",
+    "libelle_espece": "Euonymus europaeus (Fusain d'Europe)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Euonymus fortunei",
+    "libelle_espece": "Euonymus fortunei (Fusain de Fortune) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Gymnocladus dioica",
+    "libelle_espece": "Gymnocladus dioica (Chicot du Canada)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Hydrangea serrata",
+    "libelle_espece": "Hydrangea serrata (Hortensia de montagne cv.)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Ilex crenata",
+    "libelle_espece": "Ilex crenata (Houx crénelé cv.)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Ligustrum ovalifolium",
+    "libelle_espece": "Ligustrum ovalifolium",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Magnolia sp.",
+    "libelle_espece": "Magnolia sp.",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Magnolia x soulangeana",
+    "libelle_espece": "Magnolia x soulangeana (Magnolia de Soulange cv.)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Osmanthus heterophyllus",
+    "libelle_espece": "Osmanthus heterophyllus (Osmanthe à feuilles de houx) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Picea abies",
+    "libelle_espece": "Picea abies (Epicéa nain cv.) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Pinus parviflora",
+    "libelle_espece": "Pinus parviflora (Pin blanc du Japon cv.)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Pterostyrax corymbosus",
+    "libelle_espece": "Pterostyrax corymbosus",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Pterostyrax hispidus",
+    "libelle_espece": "Pterostyrax hispidus",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Quercus acutissima",
+    "libelle_espece": "Quercus acutissima (Chêne du Japon)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Quercus cerris",
+    "libelle_espece": "Quercus cerris (Chêne chevelu) *",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Quercus rubra",
+    "libelle_espece": "Quercus rubra (Chêne rouge d'Amérique)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Quercus suber",
+    "libelle_espece": "Quercus suber (Chêne liège)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Salix sp.",
+    "libelle_espece": "Salix sp.",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Ulex europaeus",
+    "libelle_espece": "Ulex europaeus (Ajonc d'Europe)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Vitex agnus-castus",
+    "libelle_espece": "Vitex agnus-castus (Gattilier)",
+    "effectif": 3
+  },
+  {
+    "taxon_key": "Abies pinsapo",
+    "libelle_espece": "Abies pinsapo (Sapin d'Andalousie)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Acer pseudoplatanus",
+    "libelle_espece": "Acer pseudoplatanus (Erable sycomore)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Acer sp.",
+    "libelle_espece": "Acer sp.",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Aesculus flava",
+    "libelle_espece": "Aesculus flava (Pavier jaune)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Aesculus parviflora",
+    "libelle_espece": "Aesculus parviflora (Pavier blanc)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus alnobetula ssp. crispa",
+    "libelle_espece": "Alnus alnobetula ssp. crispa (Aulne de montagne)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus cordata",
+    "libelle_espece": "Alnus cordata (Aulne de Corse)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus cremastogyne",
+    "libelle_espece": "Alnus cremastogyne (Aulne pedonculé)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus firma",
+    "libelle_espece": "Alnus firma (Aulne du Japon)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus nitida",
+    "libelle_espece": "Alnus nitida (Aulne de l'Himalaya)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus orientalis",
+    "libelle_espece": "Alnus orientalis (Aulne oriental)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus serrulata",
+    "libelle_espece": "Alnus serrulata (Aulne coudrier)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus serrulatoides",
+    "libelle_espece": "Alnus serrulatoides",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Alnus x",
+    "libelle_espece": "Alnus x (Aulne hybride)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Castanea mollissima",
+    "libelle_espece": "Castanea mollissima (Châtaignier de Chine)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Celtis australis",
+    "libelle_espece": "Celtis australis (Micocoulier de Provence)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Cercis siliquastrum",
+    "libelle_espece": "Cercis siliquastrum (Arbre de Judée) *",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Chamaecyparis pisifera",
+    "libelle_espece": "Chamaecyparis pisifera (Cyprès de Sawara cv.)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Cornus nuttallii",
+    "libelle_espece": "Cornus nuttallii (Cornouiller du Pacifique)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Cornus sp.",
+    "libelle_espece": "Cornus sp.",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Cotoneaster lacteus",
+    "libelle_espece": "Cotoneaster lacteus (Cotonéaster laiteux)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Cotoneaster sp.",
+    "libelle_espece": "Cotoneaster sp.",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Ficus sp.",
+    "libelle_espece": "Ficus sp. (Figuier)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Hamamelis mollis",
+    "libelle_espece": "Hamamelis mollis (Hamamélis de Chine)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Heptacodium miconioides",
+    "libelle_espece": "Heptacodium miconioides (Heptacodium de Chine) *",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Hibiscus syriacus",
+    "libelle_espece": "Hibiscus syriacus (Hibiscus 'Oiseaux Bleu')",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Hydrangea arborescens",
+    "libelle_espece": "Hydrangea arborescens (Hortensia de Virginie cv.)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Ilex aquilifolium",
+    "libelle_espece": "Ilex aquilifolium (Houx Commun)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Ilex sp.",
+    "libelle_espece": "Ilex sp.",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Juniperus sp.",
+    "libelle_espece": "Juniperus sp. (Genévrier cv.)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Liquidambar orientalis",
+    "libelle_espece": "Liquidambar orientalis",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Liquidambar sp.",
+    "libelle_espece": "Liquidambar sp.",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Magnolia tripetala",
+    "libelle_espece": "Magnolia tripetala (Magnolia parasol)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Malus sp.",
+    "libelle_espece": "Malus sp.",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Malus sylvestris",
+    "libelle_espece": "Malus sylvestris (Pommier sauvage)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Melia azedarach",
+    "libelle_espece": "Melia azedarach (Margousier)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Metasequoia glyptostroboides",
+    "libelle_espece": "Metasequoia glyptostroboides (Métaséquoia)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Nyssa sp.",
+    "libelle_espece": "Nyssa sp.",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Osmanthus decorus",
+    "libelle_espece": "Osmanthus decorus (Osmanthe du Caucase) *",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Phyllostachys viridiglaucescens",
+    "libelle_espece": "Phyllostachys viridiglaucescens (Bambou géant)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Picea glauca",
+    "libelle_espece": "Picea glauca (Epinette blanche cv.)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Pieris japonica",
+    "libelle_espece": "Pieris japonica (Andromède du Japon)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Pinus heldreichii",
+    "libelle_espece": "Pinus heldreichii (Pin de Bosnie) *",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Pinus nigra",
+    "libelle_espece": "Pinus nigra (Pin noir d'Autriche)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Pinus ponderosa",
+    "libelle_espece": "Pinus ponderosa (Pin à bois lourd)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Platanus × hybrida",
+    "libelle_espece": "Platanus × hybrida (Platane commun)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Prunus padus",
+    "libelle_espece": "Prunus padus (Merisier à grappes)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Prunus subhirtella",
+    "libelle_espece": "Prunus subhirtella (Cerisier à fleurs pleureur)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Quercus coccinea",
+    "libelle_espece": "Quercus coccinea (Chêne écarlate cv.)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Quercus myrsinifolia",
+    "libelle_espece": "Quercus myrsinifolia (Chêne à feuilles de myrsine)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Quercus petraea",
+    "libelle_espece": "Quercus petraea (Chêne sessile) *",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Quercus variabilis",
+    "libelle_espece": "Quercus variabilis (Chêne liège de Chine)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Rhododendron molle",
+    "libelle_espece": "Rhododendron molle (Azalée de Chine)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Salix × sepulcralis",
+    "libelle_espece": "Salix × sepulcralis (Saule pleureur doré)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Sinojackia rehderiana",
+    "libelle_espece": "Sinojackia rehderiana",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Styrax dasyanthus",
+    "libelle_espece": "Styrax dasyanthus",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Styrax hemsleyanus",
+    "libelle_espece": "Styrax hemsleyanus",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Thuja occidentalis",
+    "libelle_espece": "Thuja occidentalis (Thuya du Canada cv.)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Tsuga heterophylla",
+    "libelle_espece": "Tsuga heterophylla (Pruche de l'Ouest)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Viburnum rhytidophyllum",
+    "libelle_espece": "Viburnum rhytidophyllum (Viorne à feuilles ridées)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Viburnum tinus",
+    "libelle_espece": "Viburnum tinus (Laurier-tin)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Viburnum x bodnantense",
+    "libelle_espece": "Viburnum x bodnantense (Viorne de Bodnant)",
+    "effectif": 2
+  },
+  {
+    "taxon_key": "Abies concolor",
+    "libelle_espece": "Abies concolor (Sapin du Colorado)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Abies nordmanniana",
+    "libelle_espece": "Abies nordmanniana (Sapin de Nordmann)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer carpinifolium",
+    "libelle_espece": "Acer carpinifolium (Erable à feuilles de charme)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer cissifolium",
+    "libelle_espece": "Acer cissifolium (Erable à feuilles de vigne)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer diabolicum",
+    "libelle_espece": "Acer diabolicum (Erable cornu)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer monspessulanum",
+    "libelle_espece": "Acer monspessulanum (Erable de Montpellier)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer oliverianum",
+    "libelle_espece": "Acer oliverianum (Erable d'Oliver)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer saccharum",
+    "libelle_espece": "Acer saccharum (Erable à sucre)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer shirasawanum",
+    "libelle_espece": "Acer shirasawanum (Erable de Shirasawa)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer triflorum",
+    "libelle_espece": "Acer triflorum (Erable à trois fleurs)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Acer x zoeschense",
+    "libelle_espece": "Acer x zoeschense (Erable hybride cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Actinidia chinensis",
+    "libelle_espece": "Actinidia chinensis (Kiwi cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Actinidia kolomikta",
+    "libelle_espece": "Actinidia kolomikta (Kiwi arctique)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Aesculus pavia",
+    "libelle_espece": "Aesculus pavia (Pavier rouge à fleurs jaunes)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Aesculus sp.",
+    "libelle_espece": "Aesculus sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Alnus alnobetula",
+    "libelle_espece": "Alnus alnobetula (Aulne vert)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Alnus alnobetula ssp. fruticosa",
+    "libelle_espece": "Alnus alnobetula ssp. fruticosa (Aulne de Sibérie)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Alnus alnobetula ssp. suaveolens",
+    "libelle_espece": "Alnus alnobetula ssp. suaveolens (Aulne odorant)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Alnus glutinosa ssp. betuloïdes",
+    "libelle_espece": "Alnus glutinosa ssp. betuloïdes (Aulne à feuilles de bouleau)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Alnus matsumurae",
+    "libelle_espece": "Alnus matsumurae",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Alnus sp.",
+    "libelle_espece": "Alnus sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Alnus trabeculosa",
+    "libelle_espece": "Alnus trabeculosa",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Amelanchier ovalis",
+    "libelle_espece": "Amelanchier ovalis (Amélanchier)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Araucaria araucana",
+    "libelle_espece": "Araucaria araucana (Araucaria du Chili)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Betula ermanii",
+    "libelle_espece": "Betula ermanii (Bouleau d'Erman)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Betula maximowicziana",
+    "libelle_espece": "Betula maximowicziana (Bouleau à feuilles de tilleul)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Betula papyrifera",
+    "libelle_espece": "Betula papyrifera (Bouleau à papier)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Betula utilis",
+    "libelle_espece": "Betula utilis (Bouleau de l'Himalaya)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Betula utilis ssp. albosinensis",
+    "libelle_espece": "Betula utilis ssp. albosinensis (Bouleau rouge de Chine)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Carpinus orientalis",
+    "libelle_espece": "Carpinus orientalis (Charme d'Orient)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Carpinus turczaninovii",
+    "libelle_espece": "Carpinus turczaninovii (Charme de Corée)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cedrus deodara",
+    "libelle_espece": "Cedrus deodara (Cèdre de l'Himalaya)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cercis chinensis",
+    "libelle_espece": "Cercis chinensis (Gainier de Chine)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Chaenomeles sp.",
+    "libelle_espece": "Chaenomeles sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Chaenomeles x superba",
+    "libelle_espece": "Chaenomeles x superba (Cognassier à fleurs)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Chamaecyparis lawsoniana",
+    "libelle_espece": "Chamaecyparis lawsoniana (Cyprès de Lawson)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Choisya ternata",
+    "libelle_espece": "Choisya ternata (Oranger du Mexique à feuilles étroites)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Citrus trifoliata",
+    "libelle_espece": "Citrus trifoliata (Citronnier épineux)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cladrastis kentukea",
+    "libelle_espece": "Cladrastis kentukea (Virgilier à bois jaune)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Clematis lanuginosa",
+    "libelle_espece": "Clematis lanuginosa (Clématite laineuse cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Clematis × cartmanii",
+    "libelle_espece": "Clematis × cartmanii (Clématite hybride cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Clerodendrum trichotomum",
+    "libelle_espece": "Clerodendrum trichotomum (Clérodendron)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cornus alternifolia",
+    "libelle_espece": "Cornus alternifolia (Cornouiller à feuilles alternes)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cornus kousa",
+    "libelle_espece": "Cornus kousa (Cornouiller de Chine)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Corylopsis spicata",
+    "libelle_espece": "Corylopsis spicata",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Corylus colurna",
+    "libelle_espece": "Corylus colurna (Noisetier de Byzance)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cotinus coggygria",
+    "libelle_espece": "Cotinus coggygria (Arbre à perruque pourpre)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cotoneaster nanshan",
+    "libelle_espece": "Cotoneaster nanshan (Cotonéaster Nan-Shan)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cupressus arizonica",
+    "libelle_espece": "Cupressus arizonica (Cyprès de l'Arizona bleu)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Cupressus sempervirens",
+    "libelle_espece": "Cupressus sempervirens (Cyprès commun)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ehretia acuminata",
+    "libelle_espece": "Ehretia acuminata",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Elaeagnus pungens",
+    "libelle_espece": "Elaeagnus pungens (Oléastre épineux cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Eriobotrya japonica",
+    "libelle_espece": "Eriobotrya japonica (Bibacier)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Eucalyptus gunnii",
+    "libelle_espece": "Eucalyptus gunnii (Eucalyptus à feuilles rondes)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Eucalyptus sp.",
+    "libelle_espece": "Eucalyptus sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Eucommia ulmoides",
+    "libelle_espece": "Eucommia ulmoides (Arbre à gomme)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Euonymus japonicus",
+    "libelle_espece": "Euonymus japonicus (Fusain du Japon)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Euonymus myrianthus",
+    "libelle_espece": "Euonymus myrianthus (Fusain de Chine)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Fagus engleriana",
+    "libelle_espece": "Fagus engleriana (Hêtre de Chine)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Fatsia japonica",
+    "libelle_espece": "Fatsia japonica (Fatsia)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ficus carica",
+    "libelle_espece": "Ficus carica (Figuier)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Firmiana simplex",
+    "libelle_espece": "Firmiana simplex (Parasol chinois)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Fraxinus ornus",
+    "libelle_espece": "Fraxinus ornus (Frêne à fleurs)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Gleditsia triacanthos",
+    "libelle_espece": "Gleditsia triacanthos (Févier sans épines)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Gunnera manicata",
+    "libelle_espece": "Gunnera manicata (Gunnère du Brèsil)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Hydrangea hirta",
+    "libelle_espece": "Hydrangea hirta (Hortensia à feuilles d'ortie)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Hydrangea petiolaris",
+    "libelle_espece": "Hydrangea petiolaris (Hortensia grimpant)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Hydrangea sp.",
+    "libelle_espece": "Hydrangea sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ilex cassine",
+    "libelle_espece": "Ilex cassine (Houx à feuilles de chataignier)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ilex pernyi",
+    "libelle_espece": "Ilex pernyi (Houx de Perny)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ilex verticillata",
+    "libelle_espece": "Ilex verticillata (Houx verticillé)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ilex x altaclerensis",
+    "libelle_espece": "Ilex x altaclerensis (Houx de Highclere doré)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Juniperus chinensis",
+    "libelle_espece": "Juniperus chinensis (Genévrier de Chine doré)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Juniperus horizontalis",
+    "libelle_espece": "Juniperus horizontalis (Genévrier rampant)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Juniperus virginiana",
+    "libelle_espece": "Juniperus virginiana (Genévrier de Virginie)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Larix kaempferi",
+    "libelle_espece": "Larix kaempferi (Mélèze du Japon)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ligustrum japonicum",
+    "libelle_espece": "Ligustrum japonicum (Troène du japon cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Liquidambar formosana",
+    "libelle_espece": "Liquidambar formosana",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Lonicera periclymenum",
+    "libelle_espece": "Lonicera periclymenum (Chèvrefeuille des bois cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Lonicera pileata",
+    "libelle_espece": "Lonicera pileata (Chèvrefeuille luisant)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Lonicera ×tellmanniana",
+    "libelle_espece": "Lonicera ×tellmanniana (Chèvrefeuille de Tellmann)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Loropetalum chinense",
+    "libelle_espece": "Loropetalum chinense (Loropétale de Chine pourpre)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Maclura pomifera",
+    "libelle_espece": "Maclura pomifera (Oranger des Osages)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Magnolia kobus",
+    "libelle_espece": "Magnolia kobus (Magnolia de Kobé)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Magnolia macrophylla",
+    "libelle_espece": "Magnolia macrophylla (Magnolia à grandes feuilles)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Magnolia stellata",
+    "libelle_espece": "Magnolia stellata (Magnolia étoilé)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Magnolia × wieseneri",
+    "libelle_espece": "Magnolia × wieseneri (Magnolia hybride)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Malus sargentii",
+    "libelle_espece": "Malus sargentii (Pommiers à fleurs)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Malus tschonoskii",
+    "libelle_espece": "Malus tschonoskii (Pommier de Sukawa)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Malus x",
+    "libelle_espece": "Malus x (Pommier à fleurs cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Malus x robusta",
+    "libelle_espece": "Malus x robusta (Pommier d'ornement)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Malus ×moerlandsii",
+    "libelle_espece": "Malus ×moerlandsii (Pommier d'ornement cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Malus ×purpurea",
+    "libelle_espece": "Malus ×purpurea (Pommier pourpre)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Mespilus germanica",
+    "libelle_espece": "Mespilus germanica (Néflier commun)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Nandina domestica",
+    "libelle_espece": "Nandina domestica (Bambou sacré)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Osmanthus x burkwoodii",
+    "libelle_espece": "Osmanthus x burkwoodii (Osmanthe de Burkwood)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ostrya carpinifolia",
+    "libelle_espece": "Ostrya carpinifolia (Charme-houblon)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Parthenocissus quinquefolia",
+    "libelle_espece": "Parthenocissus quinquefolia (Vigne vierge de Virginie)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Phellodendron amurense",
+    "libelle_espece": "Phellodendron amurense (Arbre liège de l'Amour)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Phillyrea latifolia",
+    "libelle_espece": "Phillyrea latifolia (Filaire à larges feuilles)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Phyllostachys nigra",
+    "libelle_espece": "Phyllostachys nigra (Bambou noir)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Pinus densiflora",
+    "libelle_espece": "Pinus densiflora (Pin rouge du Japon tabulaire)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Pinus pinea",
+    "libelle_espece": "Pinus pinea (Pin parasol)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Pinus radiata",
+    "libelle_espece": "Pinus radiata (Pin de Monterey)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Platycladus orientalis",
+    "libelle_espece": "Platycladus orientalis (Thuya de Chine)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Populus szechuanica",
+    "libelle_espece": "Populus szechuanica (Peuplier du Tibet)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Prunus laurocerasus",
+    "libelle_espece": "Prunus laurocerasus (Laurier-cerise cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Prunus maackii",
+    "libelle_espece": "Prunus maackii (Cerisier de Mandchourie)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Prunus persica",
+    "libelle_espece": "Prunus persica (Pêcher)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Prunus sieboldii",
+    "libelle_espece": "Prunus sieboldii (Cerisier de Siebold)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Prunus sp.",
+    "libelle_espece": "Prunus sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Prunus x",
+    "libelle_espece": "Prunus x (Cerisier ornemental)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Prunus × yedoensis",
+    "libelle_espece": "Prunus × yedoensis (Cerisier Yoshino)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Pseudotsuga menziesii",
+    "libelle_espece": "Pseudotsuga menziesii (Sapin de Douglas)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Pyrus salicifolia",
+    "libelle_espece": "Pyrus salicifolia (Poirier à feuilles de saule cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Pyrus sp.",
+    "libelle_espece": "Pyrus sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Quercus castaneifolia",
+    "libelle_espece": "Quercus castaneifolia (Chêne à feuilles de Châtaigner)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Quercus frainetto",
+    "libelle_espece": "Quercus frainetto (Chêne de Hongrie)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Quercus macranthera",
+    "libelle_espece": "Quercus macranthera (Chêne du Caucase)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Quercus rysophylla",
+    "libelle_espece": "Quercus rysophylla (Chêne du Mexique cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Quercus texana",
+    "libelle_espece": "Quercus texana (Chêne de Nuttall)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Rhododendron luteum",
+    "libelle_espece": "Rhododendron luteum (Azalée pontique jaune)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Rhododendron ponticum",
+    "libelle_espece": "Rhododendron ponticum (Rhododendron pontique cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Rhododendron x geraldii",
+    "libelle_espece": "Rhododendron x geraldii (Rhododendron hybride)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Rhododendron × crouxii",
+    "libelle_espece": "Rhododendron × crouxii (Azalée cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Rhus typhina",
+    "libelle_espece": "Rhus typhina (Sumac de Virginie lacinié)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Salix babylonica",
+    "libelle_espece": "Salix babylonica (Saule tortueux)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Salix caprea",
+    "libelle_espece": "Salix caprea (Saule marsault)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Sciadopitys verticillata",
+    "libelle_espece": "Sciadopitys verticillata (Pin parasol du Japon)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Staphylea trifolia",
+    "libelle_espece": "Staphylea trifolia (Staphylier à trois folioles)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Styrax obassia",
+    "libelle_espece": "Styrax obassia",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Symphoricarpos albus",
+    "libelle_espece": "Symphoricarpos albus (Symphorine blanche)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Syringa persica",
+    "libelle_espece": "Syringa persica (Lilas de Perse)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Tetradium daniellii",
+    "libelle_espece": "Tetradium daniellii (Arbre à miel)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Thujopsis dolabrata",
+    "libelle_espece": "Thujopsis dolabrata (Thujopsis)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Tilia cordata",
+    "libelle_espece": "Tilia cordata",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Tilia sp.",
+    "libelle_espece": "Tilia sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Tilia tomentosa",
+    "libelle_espece": "Tilia tomentosa (Tilleul argenté)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Tilia x euchlora",
+    "libelle_espece": "Tilia x euchlora (Tilleul de Crimée)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Torreya californica",
+    "libelle_espece": "Torreya californica (Muscadier de Californie)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Torreya nucifera",
+    "libelle_espece": "Torreya nucifera (Torreya du Japon)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Torreya sp.",
+    "libelle_espece": "Torreya sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Tsuga sp.",
+    "libelle_espece": "Tsuga sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ulmus sp.",
+    "libelle_espece": "Ulmus sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Ulmus x",
+    "libelle_espece": "Ulmus x (Orme cv.)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Viburnum carlesii",
+    "libelle_espece": "Viburnum carlesii (Viorne de Carles)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Viburnum lantana",
+    "libelle_espece": "Viburnum lantana (Viorne lantane)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Viburnum sp.",
+    "libelle_espece": "Viburnum sp.",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Wollemia nobilis",
+    "libelle_espece": "Wollemia nobilis (Pin de Wollemi)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Zelkova carpinifolia",
+    "libelle_espece": "Zelkova carpinifolia (Zelkova du Caucase)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Zelkova serrata",
+    "libelle_espece": "Zelkova serrata (Zelkova du Japon)",
+    "effectif": 1
+  },
+  {
+    "taxon_key": "Zelkova sinica",
+    "libelle_espece": "Zelkova sinica (Zelkova de Chine)",
+    "effectif": 1
+  }
+]

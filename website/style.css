@@ -1,0 +1,431 @@
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #202820;
+  background: #f1f2ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.map-page,
+#map {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.map-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+}
+
+.map-heading {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 16px;
+  max-width: min(440px, calc(100vw - 32px));
+  padding: 14px 17px;
+  border: 1px solid rgb(255 255 255 / 75%);
+  border-radius: 10px;
+  background: rgb(250 250 247 / 96%);
+  box-shadow: 0 3px 16px rgb(0 0 0 / 14%);
+}
+
+.map-heading h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.map-heading p {
+  margin: 5px 0 0;
+  color: #5d665e;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.map-error {
+  position: absolute;
+  z-index: 5;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 13px 16px;
+  border: 1px solid #d9a4a4;
+  border-radius: 8px;
+  background: #fff3f2;
+  color: #7a2424;
+  font-size: 14px;
+  line-height: 1.45;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 16%);
+}
+
+.map-error[hidden] {
+  display: none;
+}
+
+/* Stack the controls in a predictable vertical order at bottom-right. */
+.maplibregl-ctrl-bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 0 12px 12px 0;
+}
+
+.maplibregl-ctrl-bottom-right .maplibregl-ctrl {
+  float: none;
+  clear: none;
+  margin: 0;
+}
+
+.maplibregl-ctrl-group {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 22%);
+}
+
+.maplibregl-ctrl-scale {
+  padding: 2px 6px;
+  border: 1px solid #747a74;
+  border-top: none;
+  background: rgb(255 255 255 / 88%);
+  color: #343a34;
+  font-size: 10px;
+}
+
+/* Keep the provider/data credits and MapLibre mark together at bottom-left. */
+.maplibregl-ctrl-bottom-left {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 0 0 8px 8px;
+}
+
+.maplibregl-ctrl-bottom-left .maplibregl-ctrl {
+  float: none;
+  clear: none;
+  margin: 0;
+}
+
+/* Plant information panel */
+.plant-panel {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: min(360px, calc(100vw - 40px));
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #202820;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 22%);
+}
+
+.plant-panel[hidden] {
+  display: none;
+}
+
+.plant-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.panel-eyebrow {
+  margin: 0 0 5px;
+  color: #687368;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.plant-panel-header h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.panel-close {
+  border: 0;
+  background: transparent;
+  color: #454f46;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.plant-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.plant-field-label {
+  color: #687368;
+  font-size: 11px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.plant-field-value {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.plant-field--scientific .plant-field-value {
+  color: #457B3B;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+@media (max-width: 600px) {
+  .map-heading {
+    top: 10px;
+    left: 10px;
+    max-width: calc(100vw - 20px);
+    padding: 11px 13px;
+  }
+
+  .map-heading h1 {
+    font-size: 14px;
+  }
+
+  .plant-panel {
+  top: auto;
+  bottom: 16px;
+  left: 0;
+  transform: none;
+  width: 100%;
+  max-height: 48vh;
+  max-height: 48dvh;
+  padding: 17px 18px calc(32px + env(safe-area-inset-bottom));
+  border-radius: 16px;
+}
+
+  .maplibregl-ctrl-bottom-right {
+    padding: 0 8px 8px 0;
+    gap: 6px;
+  }
+
+  .maplibregl-ctrl-bottom-left {
+    padding: 0 0 6px 6px;
+  }
+}
+/* Map filters */
+.map-filters {
+  position: absolute;
+  z-index: 3;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  width: auto;
+  overflow-x: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  pointer-events: none;
+}
+
+.map-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.map-filters > .filter-dropdown,
+.map-filters > .filter-toggle {
+  flex: 0 0 auto;
+  width: fit-content;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+.filter-dropdown {
+  border: 1px solid #e0e4dc;
+  border-radius: 9px;
+  background: rgb(255 255 255 / 96%);
+  color: #263326;
+  box-shadow: 0 3px 16px rgb(0 0 0 / 15%);
+  max-width: min(320px, calc(100vw - 20px));
+}
+
+.filter-dropdown summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 16px;
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.filter-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.map-filters > .filter-toggle {
+  margin-bottom: 0;
+}
+
+.filter-name {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.filter-summary {
+  color: #687368;
+  font-size: 12px;
+}
+
+.filter-dropdown-content {
+  padding: 12px;
+  border-top: 1px solid #e6e9e3;
+}
+
+#species-search {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d5dbd2;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 13px;
+}
+
+#species-clear {
+  margin: 9px 0;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: #457b3b;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#species-clear:disabled {
+  color: #a0a69e;
+  cursor: default;
+}
+
+.species-list {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.species-placeholder {
+  margin: 8px 0;
+  color: #687368;
+  font-size: 12px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .map-filters {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
+
+/* Improve horizontal filter scrolling on touchscreens */
+@media (pointer: coarse) {
+  .map-filters {
+    pointer-events: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+}
+
+/* Individual species in the dropdown */
+.species-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 3px;
+  border-bottom: 1px solid #edf0eb;
+  cursor: pointer;
+}
+
+.species-option input {
+  flex-shrink: 0;
+  margin: 0;
+  accent-color: #457b3b;
+}
+
+.species-name {
+  flex: 1;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.species-count {
+  flex-shrink: 0;
+  color: #687368;
+  font-size: 11px;
+}
+
+/* Remarquable filter */
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px 16px;
+  border: 1px solid #e0e4dc;
+  border-radius: 9px;
+  background: rgb(255 255 255 / 96%);
+  color: #263326;
+  box-shadow: 0 3px 16px rgb(0 0 0 / 15%);
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.filter-toggle input {
+  margin: 0;
+  accent-color: #457b3b;
+}
