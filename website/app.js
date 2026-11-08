@@ -6,6 +6,19 @@ const SPECIES_MENU_URL = "./data/especes-menu.json";
 const ORIGINS_MENU_URL = "./data/origines-menu.json";
 const FAMILIES_MENU_URL = "./data/familles-menu.json";
 const PLANT_LAYER_ID = "arboretum-plant-points";
+const PLANT_LABEL_LAYER_ID = "arboretum-plant-initials";
+const PLANT_RADIUS_STOPS = [
+  [13, 3],
+  [17, 5],
+  [20, 18],
+  [21, 18]
+];
+const PLANT_RADIUS_EXPRESSION = [
+  "interpolate",
+  ["linear"],
+  ["zoom"],
+  ...PLANT_RADIUS_STOPS.flat()
+];
 // Default colour for genera without a specific colour
 const DEFAULT_PLANT_COLOR = "#4BA13B";
 // Specific colours by botanical genus
@@ -58,6 +71,7 @@ const originFilter = document.querySelector("#origin-filter");
 const familyList = document.querySelector("#family-list");
 const familySelectionCount = document.querySelector("#family-selection-count");
 const familyFilter = document.querySelector("#family-filter");
+const filtersReset = document.querySelector("#filters-reset");
 
 let speciesMenu = [];
 let selectedTaxa = new Set();
@@ -65,6 +79,8 @@ let originsMenu = [];
 let selectedOrigins = new Set();
 let familiesMenu = [];
 let selectedFamilies = new Set();
+let remarkablePulseMarkers = [];
+let filterTouchDragPanWasEnabled = null;
 
 const map = new maplibregl.Map({
   container: "map",
@@ -183,6 +199,20 @@ function updateSpeciesSelectionSummary() {
 
 
 function applyFilters() {
+  const activeFilters = [
+    [speciesFilter, selectedTaxa.size > 0],
+    [familyFilter, selectedFamilies.size > 0],
+    [originFilter, selectedOrigins.size > 0],
+    [remarkableFilter.closest(".filter-toggle"), remarkableFilter.checked]
+  ];
+  const hasActiveFilters = activeFilters.some(([, active]) => active);
+
+  activeFilters.forEach(([element, active]) => {
+    element.classList.toggle("is-active", active);
+  });
+  filtersReset.hidden = !hasActiveFilters;
+  updateRemarkablePulseVisibility();
+
   if (!map.getLayer(PLANT_LAYER_ID)) return;
 
   const filters = [];
@@ -229,6 +259,17 @@ function applyFilters() {
     : filters[0] ?? null;
 
   map.setFilter(PLANT_LAYER_ID, filter);
+  if (map.getLayer(PLANT_LABEL_LAYER_ID)) {
+    const hasPlantInitials = [
+      "all",
+      ["!=", ["coalesce", ["get", "genre"], ""], ""],
+      ["!=", ["coalesce", ["get", "espece"], ""], ""]
+    ];
+    map.setFilter(
+      PLANT_LABEL_LAYER_ID,
+      filter ? ["all", hasPlantInitials, filter] : hasPlantInitials
+    );
+  }
 }
 
 
@@ -523,8 +564,110 @@ function getPlantAtPoint(point) {
   }, null).feature;
 }
 
+function updateRemarkablePulseVisibility() {
+  remarkablePulseMarkers.forEach(({ element, properties }) => {
+    const matchesFilters =
+      (!selectedTaxa.size || selectedTaxa.has(properties.taxon_key)) &&
+      (!selectedFamilies.size || selectedFamilies.has(properties.famille)) &&
+      (!selectedOrigins.size || selectedOrigins.has(properties.continent));
+
+    element.hidden = !matchesFilters;
+  });
+}
+
+function getPlantRadius(zoom) {
+  const upperStopIndex = PLANT_RADIUS_STOPS.findIndex(
+    ([stopZoom]) => stopZoom >= zoom
+  );
+
+  if (upperStopIndex === 0) return PLANT_RADIUS_STOPS[0][1];
+  if (upperStopIndex === -1) return PLANT_RADIUS_STOPS.at(-1)[1];
+
+  const [lowerZoom, lowerRadius] = PLANT_RADIUS_STOPS[upperStopIndex - 1];
+  const [upperZoom, upperRadius] = PLANT_RADIUS_STOPS[upperStopIndex];
+  const progress = (zoom - lowerZoom) / (upperZoom - lowerZoom);
+
+  return lowerRadius + (upperRadius - lowerRadius) * progress;
+}
+
+function updateRemarkablePulsePositions() {
+  const containerBounds = map.getContainer().getBoundingClientRect();
+  const canvasBounds = map.getCanvas().getBoundingClientRect();
+  const canvasOffsetX = canvasBounds.left - containerBounds.left;
+  const canvasOffsetY = canvasBounds.top - containerBounds.top;
+  const markerRadius = getPlantRadius(map.getZoom());
+  const diameter = (markerRadius + 5) * 2;
+
+  remarkablePulseMarkers.forEach(({ element, coordinates }) => {
+    const point = map.project(coordinates);
+    const disc = element.firstElementChild;
+
+    element.style.left = `${point.x + canvasOffsetX}px`;
+    element.style.top = `${point.y + canvasOffsetY}px`;
+    disc.style.left = `${-diameter / 2}px`;
+    disc.style.top = `${-diameter / 2}px`;
+    disc.style.width = `${diameter}px`;
+    disc.style.height = `${diameter}px`;
+  });
+}
+
+function addRemarkablePulseMarkers(features) {
+  const layer = document.createElement("div");
+  layer.className = "remarkable-pulse-layer";
+
+  remarkablePulseMarkers = features
+    .filter((feature) =>
+      feature.properties?.collection === "Arbre remarquable" &&
+      feature.geometry?.type === "Point" &&
+      Array.isArray(feature.geometry.coordinates)
+    )
+    .map((feature) => {
+      const element = document.createElement("span");
+      element.className = "remarkable-pulse-anchor";
+
+      const disc = document.createElement("span");
+      disc.className = "remarkable-pulse-disc";
+      disc.style.backgroundColor =
+        GENUS_COLORS[feature.properties.genre] ?? DEFAULT_PLANT_COLOR;
+      element.append(disc);
+      layer.append(element);
+
+      return {
+        element,
+        coordinates: feature.geometry.coordinates,
+        properties: feature.properties
+      };
+    });
+
+  map.getContainer().append(layer);
+  map.on("move", updateRemarkablePulsePositions);
+  map.on("resize", updateRemarkablePulsePositions);
+  updateRemarkablePulsePositions();
+  updateRemarkablePulseVisibility();
+}
+
 remarkableFilter.addEventListener("change", applyFilters);
 speciesSearch.addEventListener("input", renderSpeciesList);
+mapFilters.addEventListener("touchstart", () => {
+  if (filterTouchDragPanWasEnabled !== null) return;
+
+  filterTouchDragPanWasEnabled = map.dragPan.isEnabled();
+  map.dragPan.disable();
+}, { passive: true });
+
+function restoreMapDragAfterFilterTouch(event) {
+  if (event.touches.length > 0 || filterTouchDragPanWasEnabled === null) return;
+  if (filterTouchDragPanWasEnabled) map.dragPan.enable();
+  filterTouchDragPanWasEnabled = null;
+}
+
+document.addEventListener("touchend", restoreMapDragAfterFilterTouch, {
+  passive: true
+});
+document.addEventListener("touchcancel", restoreMapDragAfterFilterTouch, {
+  passive: true
+});
+
 mapFilters.addEventListener("click", () => {
   plantPanel.hidden = true;
 });
@@ -603,6 +746,21 @@ speciesClear.addEventListener("click", () => {
   renderSpeciesList();
 });
 
+filtersReset.addEventListener("click", () => {
+  selectedTaxa.clear();
+  selectedFamilies.clear();
+  selectedOrigins.clear();
+  remarkableFilter.checked = false;
+
+  applyFilters();
+  updateSpeciesSelectionSummary();
+  updateFamilySelectionSummary();
+  updateOriginSelectionSummary();
+  renderSpeciesList();
+  renderFamilyList();
+  renderOriginList();
+});
+
 map.on("error", (event) => {
   if (event.error) console.error("MapLibre error:", event.error);
 });
@@ -619,6 +777,8 @@ map.on("load", async () => {
       throw new Error("plants.geojson n'a pas la structure GeoJSON attendue.");
     }
 
+    addRemarkablePulseMarkers(plants.features);
+
     map.addSource("arboretum-plants", {
       type: "geojson",
       data: plants
@@ -629,16 +789,54 @@ map.on("load", async () => {
       type: "circle",
       source: "arboretum-plants",
       paint: {
-        "circle-radius": [
-          "interpolate", ["linear"], ["zoom"],
-          13, 3,
-          17, 5,
-          20, 8
-        ],
+        "circle-radius": PLANT_RADIUS_EXPRESSION,
         "circle-color": GENUS_COLOR_EXPRESSION,
         "circle-opacity": 0.95
       }
     });
+
+    map.addLayer({
+      id: PLANT_LABEL_LAYER_ID,
+      type: "symbol",
+      source: "arboretum-plants",
+      minzoom: 18,
+      filter: [
+        "all",
+        ["!=", ["coalesce", ["get", "genre"], ""], ""],
+        ["!=", ["coalesce", ["get", "espece"], ""], ""]
+      ],
+      layout: {
+        "symbol-placement": "point",
+        "text-field": [
+          "concat",
+          [
+            "upcase",
+            ["slice", ["to-string", ["coalesce", ["get", "genre"], ""]], 0, 1]
+          ],
+          [
+            "downcase",
+            ["slice", ["to-string", ["coalesce", ["get", "espece"], ""]], 0, 1]
+          ]
+        ],
+        "text-font": ["Noto Sans Bold"],
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          18, 8,
+          20, 12
+        ],
+        "text-anchor": "center",
+        "text-justify": "center",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-padding": 2
+      },
+      paint: {
+        "text-color": "#ffffff",
+        "text-halo-color": "#000000",
+        "text-halo-width": 1
+      }
+    });
+
     await loadSpeciesMenu();
     await loadOriginsMenu();
     await loadFamiliesMenu();
@@ -647,7 +845,7 @@ map.on("load", async () => {
     // One map click handler deals with both selecting a plant and closing the panel.
     map.on("click", (event) => {
       filterDropdowns.forEach((dropdown) => {
-      dropdown.open = false;
+        dropdown.open = false;
       });
 
       const feature = getPlantAtPoint(event.point);

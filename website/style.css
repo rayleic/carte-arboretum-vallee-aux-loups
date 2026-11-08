@@ -36,6 +36,53 @@ body {
   inset: 0;
 }
 
+.remarkable-pulse-layer {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.remarkable-pulse-anchor {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.remarkable-pulse-disc {
+  position: absolute;
+  display: block;
+  background: rgb(255 255 255 / 32%);
+  border-radius: 50%;
+  opacity: 0.35;
+  pointer-events: none;
+  transform: scale(0.68);
+  transform-origin: center;
+  animation: remarkable-pulse 3.6s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.remarkable-pulse-anchor[hidden] {
+  display: none;
+}
+
+@keyframes remarkable-pulse {
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .remarkable-pulse-disc {
+    animation: none;
+    opacity: 0.65;
+    transform: none;
+  }
+}
+
 .map-heading {
   position: absolute;
   z-index: 2;
@@ -264,7 +311,9 @@ body {
 }
 
 .map-filters > .filter-dropdown,
-.map-filters > .filter-toggle {
+.map-filters > .filter-toggle,
+.map-filters > .about-open,
+.map-filters > .filters-reset {
   flex: 0 0 auto;
   width: fit-content;
   box-sizing: border-box;
@@ -272,11 +321,14 @@ body {
 }
 
 .filter-dropdown {
-  border: 1px solid #e0e4dc;
-  border-radius: 9px;
-  background: rgb(255 255 255 / 96%);
+  border: 1px solid #FDF981;
+  border-radius: 6px;
+  background: rgb(255 255 255 / 10%);
   color: #263326;
-  box-shadow: 0 3px 16px rgb(0 0 0 / 15%);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 12%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
   max-width: min(320px, calc(100vw - 20px));
 }
 
@@ -284,11 +336,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 13px 16px;
+  gap: 10px;
+  min-height: 34px;
+  padding: 4px 10px;
   cursor: pointer;
   list-style: none;
   white-space: nowrap;
+}
+
+.filter-dropdown summary::after {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.filter-dropdown[open] summary::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.filter-dropdown.is-active,
+.filter-toggle.is-active {
+  border-color: #FDF981;
+  background: #59b755;
+  color: #fff;
+}
+
+.filter-dropdown.is-active .filter-summary {
+  color: rgb(255 255 255 / 88%);
 }
 
 .filter-dropdown summary::-webkit-details-marker {
@@ -411,16 +489,20 @@ body {
 .filter-toggle {
   display: flex;
   align-items: center;
-  gap: 10px;
-  width: 100%;
-  margin-bottom: 8px;
-  padding: 12px 16px;
-  border: 1px solid #e0e4dc;
-  border-radius: 9px;
-  background: rgb(255 255 255 / 96%);
+  gap: 8px;
+  width: auto;
+  min-height: 34px;
+  margin-bottom: 0;
+  padding: 4px 10px;
+  border: 1px solid #FDF981;
+  border-radius: 6px;
+  background: rgb(255 255 255 / 10%);
   color: #263326;
-  box-shadow: 0 3px 16px rgb(0 0 0 / 15%);
-  font-size: 14px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 12%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  font-size: 13px;
   font-weight: 650;
   cursor: pointer;
 }
@@ -432,23 +514,82 @@ body {
 
 /* About button */
 .about-open {
-  position: absolute;
-  z-index: 4;
-  top: 16px;
-  right: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 14px;
-  border: 1px solid #e0e4dc;
-  border-radius: 9px;
-  background: rgb(255 255 255 / 96%);
+  margin-left: auto;
+  min-height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #FDF981;
+  border-radius: 6px;
+  background: rgb(255 255 255 / 10%);
   color: #263326;
-  box-shadow: 0 3px 16px rgb(0 0 0 / 15%);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 12%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s, border-color 0.3s;
   font: inherit;
   font-size: 14px;
   font-weight: 650;
   cursor: pointer;
+  white-space: nowrap;
+}
+
+.filters-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 34px;
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 50%;
+  background: #d94343;
+  color: #fff;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 18%);
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.filters-reset[hidden] {
+  display: none;
+}
+
+.filters-reset span {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+}
+
+.filters-reset span::before,
+.filters-reset span::after {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.filters-reset span::before {
+  transform: rotate(45deg);
+}
+
+.filters-reset span::after {
+  transform: rotate(-45deg);
+}
+
+.filters-reset:hover {
+  background: #bd3030;
+  transform: scale(1.05);
 }
 
 .about-open:hover {
@@ -459,8 +600,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
   border: 1.5px solid #457b3b;
   border-radius: 50%;
   color: #457b3b;
@@ -554,17 +695,10 @@ body {
 /* Mobile layout */
 @media (max-width: 600px) {
   .about-open {
-    top: 10px;
-    right: 10px;
-    padding: 9px 11px;
     font-size: 13px;
   }
 
   /* Leave room for the About button above the horizontally scrollable filters. */
-  .map-filters {
-    right: 112px;
-  }
-
   .about-overlay {
     padding: 10px;
   }
@@ -578,5 +712,31 @@ body {
 
   .about-header h1 {
     font-size: 22px;
+  }
+}
+
+@media (pointer: coarse) {
+  .filter-name,
+  .about-open {
+    font-size: 15px;
+  }
+
+  .filter-summary,
+  .species-placeholder {
+    font-size: 13px;
+  }
+
+  .filter-toggle,
+  #species-search {
+    font-size: 14px;
+  }
+
+  #species-clear,
+  .species-name {
+    font-size: 13px;
+  }
+
+  .species-count {
+    font-size: 12px;
   }
 }

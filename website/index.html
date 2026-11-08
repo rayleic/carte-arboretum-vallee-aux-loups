@@ -14,16 +14,7 @@
 <body>
   <main class="map-page">
     <div id="map" aria-label="Carte interactive de l'arboretum"></div>
-    <button
-      id="about-open"
-      class="about-open"
-      type="button"
-      aria-haspopup="dialog"
-      aria-controls="about-overlay"
-    >
-      <span class="about-icon" aria-hidden="true">i</span>
-      À propos
-    </button>
+    
     <aside id="plant-panel" class="plant-panel" hidden>
   
     <div class="plant-panel-header">
@@ -106,7 +97,26 @@
       <div id="origin-list" class="species-list"></div>
     </div>
   </details>
-
+  <button
+    id="filters-reset"
+    class="filters-reset"
+    type="button"
+    aria-label="Réinitialiser les filtres"
+    title="Réinitialiser les filtres"
+    hidden
+  >
+    <span aria-hidden="true">×</span>
+  </button>
+<button
+      id="about-open"
+      class="about-open"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="about-overlay"
+    >
+      <span class="about-icon" aria-hidden="true">i</span>
+      À propos
+    </button>
 </section>
 
     <div id="map-error" class="map-error" role="alert" hidden></div>
@@ -135,11 +145,9 @@
       <section aria-labelledby="about-project-title">
         <h2 id="about-project-title">Le projet</h2>
         <p>
-          Ce site est un projet personnel, suscité par mon intérêt pour la botanique,  
-          et l'envie d'utiliser les outils d'aide à la programmation pour me former.
-          Cette carte interactive permet de localiser les végétaux inventoriés et d'explorer 
+          Ce site est issu d'un projet personnel. La carte interactive permet de localiser les végétaux inventoriés et d'explorer 
           la collection à l'aide de différents filtres. Que ce soit pour explorer à pied ou 
-          pour étudier la diversité de la collection de l'arboretum, ce site devrait être utile
+          pour étudier la diversité de la collection de l'arboretum à distance, ce site devrait être utile
           aux amateurs de la nature.
         </p>
       </section>
