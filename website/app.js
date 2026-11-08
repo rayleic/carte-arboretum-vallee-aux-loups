@@ -88,7 +88,7 @@ const map = new maplibregl.Map({
   center: [2.273, 48.7705],
   zoom: 16,
   maxZoom: 21,
-  minZoom: 13,
+  minZoom: 11,
   attributionControl: false,
   maplibreLogo: true,
   logoPosition: "bottom-left"
